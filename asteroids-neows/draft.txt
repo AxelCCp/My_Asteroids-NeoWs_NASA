@@ -1,0 +1,128 @@
+/*
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.back.spring.asteroids_neows.model.entity.Asteroid;
+import com.back.spring.asteroids_neows.model.entity.AsteroidResult;
+import com.back.spring.asteroids_neows.model.entity.CloseApproachData;
+import com.back.spring.asteroids_neows.model.entity.Diameter;
+import com.back.spring.asteroids_neows.model.entity.Link;
+import com.back.spring.asteroids_neows.model.entity.MissDistance;
+import com.back.spring.asteroids_neows.model.entity.RelativeVelocity;
+import com.back.spring.asteroids_neows.model.entity.measures.FeetMeasure;
+import com.back.spring.asteroids_neows.model.entity.measures.KilometersMeasure;
+import com.back.spring.asteroids_neows.model.entity.measures.MetersMeasure;
+import com.back.spring.asteroids_neows.model.entity.measures.MilesMeasure;
+import com.back.spring.asteroids_neows.model.service.AsteroidResultServ;
+
+*/
+
+
+
+ /*
+        AsteroidResult asteroidResult = new AsteroidResult();
+
+        Link links = new Link();
+        links.setNext("ahsjdgahsdjg");
+        links.setPrevious("kahdasjhd");
+        links.setSelf("ajksdhaksd");
+
+        asteroidResult.setLinks(links);
+        asteroidResult.setElement_count(59L);
+
+        //NearEarthObjects nearEarthObjects = new NearEarthObjects();
+
+        Map<String, List<Asteroid>> asteroidsByDay = new HashMap<>();
+
+        List<Asteroid>asteroidList = new ArrayList<>();
+
+        Asteroid asteroid = new Asteroid();
+
+        links = new Link();
+        links.setSelf("kahsdkajhsdkajshds");
+        asteroid.setLinks(links);
+
+        asteroid.setId("23423");
+        asteroid.setNeo_reference_id("asdas");
+        asteroid.setName("name");
+        asteroid.setNasa_jpl_url("2uysjhdgfhsjdgfhsdfsxf");
+        asteroid.setAbsolute_magnitude_h(20.75);
+
+        Diameter estimated_diameter = new Diameter();
+        
+        KilometersMeasure kilometers = new KilometersMeasure();
+        kilometers.setEstimated_diameter_min(0.1881719895);
+        kilometers.setEstimated_diameter_max(0.42076536);
+        estimated_diameter.setKilometers(kilometers);
+
+        MetersMeasure meters = new MetersMeasure();
+        meters.setEstimated_diameter_min(0.1881719895);
+        meters.setEstimated_diameter_max(0.42076536);
+        estimated_diameter.setMeters(meters);
+
+        MilesMeasure miles = new MilesMeasure();
+        miles.setEstimated_diameter_min(0.1881719895);
+        miles.setEstimated_diameter_max(0.42076536);
+        estimated_diameter.setMiles(miles);
+
+        FeetMeasure feet = new FeetMeasure();
+        feet.setEstimated_diameter_min(0.1881719895);
+        feet.setEstimated_diameter_max(0.42076536);
+        estimated_diameter.setFeet(feet);
+
+        asteroid.setEstimated_diameter(estimated_diameter);
+        asteroid.setIs_potentially_hazardous_asteroid(true);
+
+        List<CloseApproachData>close_approach_data = new ArrayList<>();
+        CloseApproachData close_approach_data_1 = new CloseApproachData();
+        close_approach_data_1.setClose_approach_date(LocalDate.now());   
+        close_approach_data_1.setClose_approach_date_full(LocalDateTime.now());
+        close_approach_data_1.setEpoch_date_close_approach(4243234L);
+
+        RelativeVelocity relative_velocity = new RelativeVelocity();
+        relative_velocity.setKilometers_per_hour("2342");
+        relative_velocity.setKilometers_per_second("24243");
+        relative_velocity.setMiles_per_hour("5345");
+        close_approach_data_1.setRelative_velocity(relative_velocity);
+
+        MissDistance miss_distance = new MissDistance();
+        miss_distance.setAstronomical("234234");
+        miss_distance.setLunar("2345345");
+        miss_distance.setKilometers("3464564");
+        miss_distance.setMiles("33534534");
+        close_approach_data_1.setMiss_distance(miss_distance);
+
+        close_approach_data_1.setOrbiting_body("earth");
+
+        close_approach_data.add(close_approach_data_1);
+
+        asteroid.setClose_approach_data(close_approach_data);
+
+        asteroid.setIs_sentry_object(false);
+
+        asteroidList.add(asteroid);
+
+        asteroidsByDay.put("2021-09-08", asteroidList);
+
+        //nearEarthObjects.setAsteroidsByDay(asteroidsByDay);
+
+        //asteroidResult.setNear_earth_objects(nearEarthObjects);
+
+        asteroidResult.setNear_earth_objects(asteroidsByDay);
+
+
+
+        return asteroidResult;
+
+        */
