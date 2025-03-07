@@ -1,0 +1,159 @@
+
+
+<div class=" mb-5 pb-5 mt-5">
+
+    <h4 class="titleColor font-weight-light mb-5">Asteroids - NeoWs</h4>
+
+    <div class="backGroundDark mb-5">
+        <p class="textColor textFont mx-2 py-3">NeoWs (Near Earth Object Web Service) is a RESTful web service for near earth Asteroid information. With NeoWs a user can: search for Asteroids based on their closest approach date to Earth, lookup a specific Asteroid with its NASA JPL small body id, as well as browse the overall data-set. Data-set: All the data is from the NASA JPL Asteroid team (http://neo.jpl.nasa.gov/).</p>
+    </div>
+
+    <form action="" class="mb-5">
+
+        <h5 class="text-warning mt-4">Filters:</h5>
+        
+        <div class="row">
+
+            <div class="col-sm-2 ms-2 backGroundDark-left">
+                <div class="row my-3">
+                    <label class="col-sm-5 titleColor mt-2" for="start"><h5>Start date:</h5></label>
+                    <input class="col-sm-3 form-control w-50 bg-dark text-light border-secondary rounded-pill" type="date" name="start">
+                </div>
+            </div>
+            <div class="col-sm-2 backGroundDark-right">
+                <div class="row my-3">
+                    <label class="col-sm-5 titleColor mt-2" for="end"><h5>End date:</h5></label>
+                    <input class="col-sm-3 form-control w-50 bg-dark text-light border-secondary rounded-pill" type="date" name="end">
+                </div>
+            </div>
+        </div>
+        
+
+    </form>
+
+    <table class=" table table-hover table-dark w-100 opacity-75 mb-5">
+
+        <thead style="color: rgb(173, 138, 255);">
+
+            <tr class="text-center align-middle">
+                <th>Asteroid json</th>
+                <th>Id</th>
+                <th>Neo reference id</th>
+                <th>Name</th>
+                <th>Nasa jpl</th>
+                <th>Absolute magnitude [h]</th>
+                <th>Feet estimated diameter min</th>
+                <th>Feet estimated diameter max</th>
+                <th>Meter estimated diameter min</th>
+                <th>Meter estimated diameter max</th>
+                <th>Kilometer estimated diameter min</th>
+                <th>Kilometer estimated diameter max</th>
+                <th>Mile estimated diameter min</th>
+                <th>Mile estimated diameter max</th>
+                <th>Is potentially hazardous asteroid</th>
+                <th>Close approach data</th>
+                <th>Is sentry object</th>
+                <th>Sentry data</th>
+            </tr>
+
+        </thead>
+
+        <tbody class="w-100 text-center" style="color: rgb(206, 206, 206);">
+    
+
+    @for (asteroidDto of asteroidDtoList; track $index) {
+
+        <tr>
+
+            @if(asteroidDto.link_asteroid != null && asteroidDto.link_asteroid != '') {
+                <td><a class="link-info" href='{{asteroidDto.link_asteroid}}'>View info</a></td>
+            } @else {
+                <td> - </td>
+            }
+
+            <td>{{asteroidDto.id}}</td>
+
+            <td>{{asteroidDto.neo_reference_id}}</td>
+
+            <td>{{asteroidDto.name}}</td>
+
+            @if(asteroidDto.nasa_jpl_url != null && asteroidDto.nasa_jpl_url != '') {
+                <td><a class="link-info" href={{asteroidDto.nasa_jpl_url}}>View info</a></td>
+            } @else {
+                <td> - </td>
+            }
+
+            <td>{{asteroidDto.absolute_magnitude_h}}</td>
+
+            <td class="diameter-info">{{asteroidDto.feet_estimated_diameter_min}}</td>
+
+            <td class="diameter-info">{{asteroidDto.feet_estimated_diameter_max}}</td>
+
+            <td class="diameter-info">{{asteroidDto.meter_estimated_diameter_min}}</td>
+
+            <td class="diameter-info">{{asteroidDto.meter_estimated_diameter_max}}</td>
+
+            <td class="diameter-info">{{asteroidDto.kilometer_estimated_diameter_min}}</td>
+
+            <td class="diameter-info">{{asteroidDto.kilometer_estimated_diameter_max}}</td>
+
+            <td class="diameter-info">{{asteroidDto.mile_estimated_diameter_min}}</td>
+
+            <td class="diameter-info">{{asteroidDto.mile_estimated_diameter_max}}</td>
+
+            @if(asteroidDto.is_potentially_hazardous_asteroid == false) {
+                <td class="text-secondary fw-bold">{{asteroidDto.is_potentially_hazardous_asteroid}}</td>
+            } @else {
+                <td class="text-danger fw-bold">{{asteroidDto.is_potentially_hazardous_asteroid}}</td>
+            }
+            @for(cad of asteroidDto.close_approach_data_dto; track $index) {
+        
+                <td class="text-end text-warning">
+                    <span title="close_approach_date">{{cad.close_approach_date}} </span><br> 
+                    <span title="close_approach_date_full"> {{cad.close_approach_date_full}} </span><br>
+                    <span title="epoch_date_close_approach"> {{cad.epoch_date_close_approach}} </span><br>
+                    <span title="kilometers_per_second"> {{cad.kilometers_per_second}} </span><br>
+                    <span title="kilometers_per_hour"> {{cad.kilometers_per_hour}} </span><br>
+                    <span title="miles_per_hour"> {{cad.miles_per_hour}} </span><br>
+                    <span title="astronomical"> {{cad.astronomical}} </span><br>
+                    <span title="lunar"> {{cad.lunar}} </span><br>
+                    <span title="kilometers"> {{cad.kilometers}} </span><br>
+                    <span title="miles"> {{cad.miles}} </span><br>
+                    <span title="orbiting_body"> {{cad.orbiting_body}} </span><br>
+                </td>
+
+        }
+
+            @if(asteroidDto.is_sentry_object == false) {
+                <td class="text-secondary fw-bold">{{asteroidDto.is_sentry_object}}</td>
+            } @else {
+                <td class="text-primary fw-bold">{{asteroidDto.is_sentry_object}}</td>
+            }
+
+            @if(asteroidDto.sentry_data != null && asteroidDto.sentry_data != '') {
+                <td><a class="link-info" (click)="onOpenSentryData(asteroidDto.sentry_data)">View info</a></td>
+            } @else {
+                <td> - </td>
+            }
+
+            
+
+        </tr>
+
+    }
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+
+
+@if(open) {
+    <div class="abrir-modal animacion fadeIn">
+        <sentry-data (closeSentryDataEventEmitter)="onCloseSentryData()" [sentry_data]="sentry_data_selected" />
+    </div>
+}

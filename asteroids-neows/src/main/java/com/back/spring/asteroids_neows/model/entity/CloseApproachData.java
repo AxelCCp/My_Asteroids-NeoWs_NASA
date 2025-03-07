@@ -1,27 +1,24 @@
 package com.back.spring.asteroids_neows.model.entity;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 public class CloseApproachData {
 
-    private LocalDate close_approach_date;
-    private LocalDateTime close_approach_date_full;
+    private String close_approach_date;
+    private String close_approach_date_full;
     private Long epoch_date_close_approach;
     private RelativeVelocity relative_velocity;
     private MissDistance miss_distance;
     private String orbiting_body;
     
-    public LocalDate getClose_approach_date() {
+    public String getClose_approach_date() {
         return close_approach_date;
     }
-    public void setClose_approach_date(LocalDate close_approach_date) {
+    public void setClose_approach_date(String close_approach_date) {
         this.close_approach_date = close_approach_date;
     }
-    public LocalDateTime getClose_approach_date_full() {
+    public String getClose_approach_date_full() {
         return close_approach_date_full;
     }
-    public void setClose_approach_date_full(LocalDateTime close_approach_date_full) {
+    public void setClose_approach_date_full(String close_approach_date_full) {
         this.close_approach_date_full = close_approach_date_full;
     }
     public Long getEpoch_date_close_approach() {

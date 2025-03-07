@@ -15,6 +15,7 @@ public class Asteroid {
     private Boolean is_potentially_hazardous_asteroid;
     private List<CloseApproachData> close_approach_data;
     private Boolean is_sentry_object;
+    private String sentry_data;
 
     public Asteroid(){
         this.close_approach_data = new ArrayList<>();
@@ -82,6 +83,16 @@ public class Asteroid {
     public void setIs_sentry_object(Boolean is_sentry_object) {
         this.is_sentry_object = is_sentry_object;
     }
+
+    public String getSentry_data() {
+        return sentry_data;
+    }
+
+    public void setSentry_data(String sentry_data) {
+        this.sentry_data = sentry_data;
+    }
+
+    
 
 
 

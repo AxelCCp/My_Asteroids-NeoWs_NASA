@@ -1,0 +1,269 @@
+
+<div class="abrir-modal animacion fadeIn">
+                    
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        
+        <div class="modal-content border rounded border-secondary sentryDataModal">
+            
+            <div class="modal-header">
+    
+                <h4 class="titleColor ms-3 mt-3">Sentry data</h4>
+            
+            </div>
+
+            
+            <div class="modal-body mb-3 mx-3 textModalColor">
+
+                <div class="row mx-5 mt-5">
+
+                <div class="col-sm-6">
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Links - near earth object parent:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <a class="link-info" href='{{sentry_data.links.near_earth_object_parent}}'>Json view</a>
+                        </div>
+                    </div>
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Links - self:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <a class="link-info" href='{{sentry_data.links.self}}'>Json view</a>
+                        </div>
+                    </div>
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Spk Id:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.spkId}}</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Designation:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.designation}}</p>
+                        </div>
+                    </div>
+                
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>sentry Id:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.sentryId}}</p>
+                        </div>
+                    </div>
+                        
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Fullname:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.fullname}}</p>
+                        </div>
+                    </div>
+
+                    
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Year range min:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.year_range_min}}</p>
+                        </div>
+                    </div>
+                    
+                        
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Year range max:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.year_range_max}}</p>
+                        </div>
+                    </div>
+                        
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Potential impacts:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.potential_impacts}}</p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Impact probability:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.impact_probability}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>V infinity:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.v_infinity}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                        
+                <div class="col-sm-6">
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Absolute magnitude:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.absolute_magnitude}}</p>
+                        </div>
+                    </div>
+                
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Estimated diameter:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.estimated_diameter}}</p>
+                        </div>
+                    </div>
+                        
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Palermo scale ave:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.palermo_scale_ave}}</p>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Palermo scale max:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.Palermo_scale_max}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Torino scale:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.torino_scale}}</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Last obs:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.last_obs}}</p>
+                        </div>
+                    </div>
+                        
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Is active sentry object:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.is_active_sentry_object}}</p>
+                        </div>
+                    </div>
+                    
+                            
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Url impact details:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2"> 
+                            <a class="link-info" href='{{sentry_data.url_impact_details}}'>nasa.gov/sentry/details</a>
+                        </div>
+                    </div>
+                    
+                               
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Url orbital element details:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <a class="link-info" href='{{sentry_data.url_orbital_element_details}}'>tools/sbdb_lookup</a>
+                        </div>
+                    </div>
+                        
+                    <div class="row my-3 ms-2">
+                        <div class="col-sm-8 col-form-label border rounded border-0 text-start textColor textFont">
+                            <label>Average lunar distance:</label> 
+                        </div>
+
+                        <div class="col-sm-4 mt-2">
+                            <p>{{sentry_data.average_lunar_distance}}</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="text-end">
+            <button type="button" class="btn btn-outline-danger me-1 mt-3" (click)="onCloseSentryData()">
+                <span>X</span>
+             </button>
+            </div>
+                    
+
+            </div>
+            
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+

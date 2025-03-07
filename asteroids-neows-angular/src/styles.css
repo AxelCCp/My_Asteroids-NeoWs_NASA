@@ -1,0 +1,111 @@
+
+
+html, body {
+    background: url('../public/assets/images/planet-orbit-outer-space-cosmos-distant-planet-3840x2160-8763.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* altura de pie de página */
+  }
+
+
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+    background-color:rgba(20, 20, 20, 0.50);
+}
+
+.textColor {
+    color: rgb(221, 212, 184);
+}
+
+.textFont {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.titleColor {
+    color: rgb(212, 212, 212);
+}
+
+
+.backGroundDark {
+    background-color:rgba(20, 20, 20, 0.60);
+    border-radius: 10px;
+}
+
+.backGroundDark-left {
+    background-color:rgba(20, 20, 20, 0.60);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.backGroundDark-right {
+    background-color:rgba(20, 20, 20, 0.60);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+/* -------modal------------ */
+
+.abrir-modal {
+    background-color: rgba(20, 20, 20, 0.3);
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .animacion {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+  }
+  
+  .fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+  
+    to {
+        opacity: 1
+    }
+  }
+
+  /* -------modal------------ */
