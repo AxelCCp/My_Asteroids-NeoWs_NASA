@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { AsteroidDto } from '../../models/AsteroidDto';
 import { AsteroidService } from '../../services/Asteroid.service';
 import { Test } from '../../models/Test';
+import { SharingDataService } from '../../services/SharingData.service';
 
 @Component({
   selector: 'asteroid-neows',
@@ -20,15 +21,25 @@ export class AsteroidNeowsComponent implements OnInit {
 
   tests : Test[] = [];
 
-  constructor(private asteroidService : AsteroidService) {}
+  constructor(private asteroidService : AsteroidService, private sharingData : SharingDataService) {}
   
   ngOnInit(): void {
     
     this.asteroidService.findAll().subscribe(asteroidDtoList => this.asteroidDtoList = asteroidDtoList);
+
+    this.findAsteroidById();     
     
     //this.asteroidService.findAll2().subscribe(tests => this.tests = tests);
     //console.log('tests: ', this.tests);
-    
+
+  }
+
+
+  findAsteroidById() {
+    this.sharingData.findAsteroidByIdEventEmitter.subscribe(idAsteroid => {
+      const asteroid = this.asteroidDtoList.find(asteroid => asteroid.id == idAsteroid.toString());
+      this.sharingData.selectAsteroidEventEmitter.emit(asteroid);
+    })
   }
 
 }

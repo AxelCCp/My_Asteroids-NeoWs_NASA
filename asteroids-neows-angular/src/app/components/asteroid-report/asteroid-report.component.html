@@ -36,6 +36,7 @@
         <thead style="color: rgb(173, 138, 255);">
 
             <tr class="text-center align-middle">
+                <th>Load Data</th>
                 <th>Asteroid json</th>
                 <th>Id</th>
                 <th>Neo reference id</th>
@@ -65,6 +66,10 @@
 
         <tr>
 
+            <td class="text-center align-middle">
+                <button class="btn btn-outline-primary rounded-circle text-light" [routerLink]="['/asteroid-report/load', asteroidDto.id]">+</button>
+            </td>
+            
             @if(asteroidDto.link_asteroid != null && asteroidDto.link_asteroid != '') {
                 <td><a class="link-info" href='{{asteroidDto.link_asteroid}}'>View info</a></td>
             } @else {
